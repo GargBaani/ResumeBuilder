@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resume Builder - Home</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="logo">
+        <img src="images/logo.png" alt="Company Logo" class="logo-img">
+        <div class="logo-text">
+          <span class="company-name">COMPANY</span><br>
+          <span class="tagline">business tagline</span>
+        </div>
+      </div>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="#services">Our Services</a></li>
+        <li><a href="#pricing">Pricing</a></li>
+        <li><a href="#faq">FAQ</a></li>
+      </ul>
+      <a href="#" class="quote-btn">Get A Quote</a>
+      <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="hero-content">
+      <div class="hero-text">
+        <h1>
+          <span class="line1">Your Resume</span><br>
+          <span class="line2">Deserves A Yes</span><br>
+          <span class="line3">Let’s Make It Happen</span>
+        </h1>
+        <p>
+          If your resume isn’t getting responses, it’s time for an upgrade. 
+          Get an ATS-Optimized resume crafted by HR experts to help you land more interviews. 
+          Our resumes are designed to get your foot in the door and place your name at the top of the shortlist.
+        </p>
+        <div class="hero-btns">
+          <a href="#" class="btn primary">RESUME PACKAGES</a>
+          <a href="#" class="btn secondary">CONTACT US</a>
+        </div>
+      </div>
+
+      <div class="hero-img">
+        <div class="wave-bg"></div>
+        <img src="images/student.png" alt="Student">
+      </div>
+    </div>
+  </section>
+
+  <section class="features" id="services">
+    <h2>What You Get</h2>
+    <p class="subTit">You’re Not Just Another Applicant And Your Resume Shouldn’t Look Like One</p>
+    <div class="feature-grid">
+      <div class="card">
+        <img src="images/c1.png" alt="Resume Icon" class="feature-img">
+        <h3>A Resume That Passes ATS Filters</h3>
+        <p>Get a professionally written, keyword-optimized resume that lands in recruiter inboxes—not rejection piles.</p>
+      </div>
+
+      <div class="card">
+        <img src="images/c2.png" alt="Cover Letter Icon" class="feature-img">
+        <h3>A Cover Letter That Gets Read</h3>
+        <p>Stand out with a cover letter that speaks directly to the role and reflects your strengths.</p>
+      </div>
+
+      <div class="card">
+        <img src="images/c3.png" alt="LinkedIn Icon" class="feature-img link">
+        <h3>A LinkedIn Profile That Works For You</h3>
+        <p>Attract the right eyes, start conversations, and show up in recruiter searches.</p>
+      </div>
+
+      <div class="card">
+        <img src="images/c4.png" alt="Interview Icon" class="feature-img">
+        <h3>Interview Confidence</h3>
+        <p>Interview preparation with real HR professionals so you speak clearly, confidently, and convincingly.</p>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById("navLinks").classList.toggle("active");
+    }
+  </script>
+</body>
+</html>

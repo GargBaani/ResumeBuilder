@@ -1,0 +1,373 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  color: black;
+  line-height: 1.6;
+  background: #fff;
+}
+
+/* Navbar */
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: #fff;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  z-index: 1000;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  font-size: 1.2rem;
+  gap: 10px;
+}
+
+.logo img {
+  height: 35px;
+}
+
+.logo-text {
+  display: flex;
+  flex-direction: column;
+  line-height: .5;
+}
+
+.company-name {
+  font-size: 24px;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin: 0;
+  padding: 0;
+}
+
+.tagline {
+  font-size: 14px;
+  font-weight: 100;
+  color: #666;
+  margin: 0;
+  padding: 0;
+  margin-left: 2px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  font-size: 1rem;
+  color: black;
+  transition: 0.3s;
+}
+
+.nav-links li a:hover,
+.nav-links li a.active {
+  color: #ff3366;
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+.quote-btn { padding: 0.6rem 1rem; background: #ff3366; color: #fff; font-weight: 600; border-radius: 25px; text-decoration: none; /* border: 2px solid; */ border-image: linear-gradient(45deg, #ff4b7d, #ffb347) 1; box-shadow: 0 0 8px rgba(255, 75, 125, 0.3); transition: all 0.3s ease; }
+
+/* Hero Section */
+.hero {
+  background: #ffd6dd;
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 60px;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.hero-text {
+  flex: 1;
+  max-width: 50%;
+  z-index: 2;
+}
+
+.hero-text h1 {
+  font-size: 3rem;
+  line-height: 1.2;
+  margin-bottom: 1.5rem;
+}
+
+.hero-text .line1 {
+  color: #000;
+}
+
+.hero-text .line2 {
+  color: #ff004f !important;
+  font-weight: 700;
+  background: none !important;
+  padding: 0 !important;
+  border: none !important;
+  box-shadow: none !important;
+  display: inline-block;
+  position: relative;
+}
+
+.hero-text .line2::after {
+  content: '';
+  position: absolute;
+  left: 10%;
+  bottom: 2px;
+  width: 80%;
+  height: 3px;
+  background: #ff004f;
+  border-radius: 50%;
+  transform: scaleX(0.9) scaleY(0.8) translateY(2px);
+  transform-origin: center;
+  opacity: 0.9;
+}
+
+.hero-text .line2::before {
+  content: '';
+  position: absolute;
+  left: -2%;
+  bottom: -4px;
+  width: 104%;
+  height: 4px;
+  background: #ff004f;
+  border-radius: 50%;
+  transform: scaleX(1) scaleY(0.9) translateY(2px);
+  transform-origin: center;
+}
+
+.hero-text .line3 {
+  color: #000;
+}
+
+.hero-text p {
+  font-size: 1rem;
+  color: #444;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+.hero-btns .btn {
+  display: inline-block;
+  padding: 12px 22px;
+  border-radius: 25px;
+  font-size: 15px;
+  font-weight: 600;
+  text-decoration: none;
+  margin-right: 12px;
+  transition: all 0.3s ease;
+}
+
+.btn.primary {
+  border: 2px solid #ff004f;
+  color: #ff004f;
+  background: white;
+  font-weight: normal;
+}
+
+.btn.primary:hover {
+  background: #ff004f;
+  color: #fff;
+}
+
+.btn.secondary {
+  background: #ff004f;
+  color: #fff;
+  font-weight: normal;
+}
+
+.btn.secondary:hover {
+  background: #e00045;
+}
+
+.hero-img {
+  position: absolute;
+  bottom: 0;
+  right: 40px;
+  max-width: 45%;
+  z-index: 1;
+}
+
+.hero-img img {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  object-fit: contain;
+  display: block;
+}
+
+/* Features */
+.features {
+  text-align: center;
+  padding: 60px 20px;
+ 
+}
+
+.features h2 {
+  display: inline-block;
+  background-color: #ffd6dd;
+  padding: 5px 12px;
+  border-radius: 6px;
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.subTit {
+  color: #000;
+  font-weight: bold;
+  font-size: 23px;
+}
+
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  justify-items: center;
+  margin-top: 40px;
+}
+
+.card {
+  background: #fff;
+  border-radius: 15px;
+  padding: 25px 20px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+  height: 400px;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+}
+
+.feature-img {
+  width: 80%;
+  height: 180px;
+  object-fit: contain;
+  margin-bottom: 15px;
+}
+
+.card h3 {
+  font-size: 18px;
+  font-weight: 600;
+  color: black;
+  margin-bottom: 12px;
+  min-height: 50px;
+}
+
+.card p {
+  font-size: 16px;
+  line-height: 1.6;
+  text-align: justify;
+  text-justify: inter-word;
+  width: 100%;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* Rating & Resume Count */
+.rating, .resume-count {
+  background: #fff;
+  border-radius: 12px;
+  padding: 8px 14px;
+  font-size: 14px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  position: absolute;
+  display: flex;
+  align-items: center;
+}
+
+.rating {
+  top: 20px;
+  left: 10%;
+}
+
+.rating::before {
+  content: "⭐";
+  margin-right: 6px;
+  color: #ffbb00;
+}
+
+.resume-count {
+  bottom: 20px;
+  right: 10%;
+}
+
+.resume-count::before {
+  content: "🎓";
+  margin-right: 6px;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .hero {
+    height: auto;
+    padding: 80px 20px 40px;
+  }
+
+  .hero-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .hero-text {
+    max-width: 90%;
+  }
+
+  .hero-img {
+    position: relative;
+    bottom: 0;
+    right: 0;
+    margin-top: 30px;
+    max-width: 70%;
+  }
+
+  .hero-img img {
+    max-width: 350px;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero-text h1 {
+    font-size: 2rem;
+  }
+
+  .hero-img img {
+    max-width: 280px;
+  }
+}
